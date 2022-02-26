@@ -1,0 +1,68 @@
+---
+title: "**INFO 201 - Assignment 3**"
+author: "Aswin Sundar"
+date: "2/25/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/analysis.R")
+library(knitr)
+options(digits = 2)
+```
+
+## Introduction:
+
+Over the last few years, and especially during the pandemic, more focus has been brought on the social injustice prevalent in the United States of America. This has been seen in many ways including the Black Lives Matter Protest. As more and more people are learning more and more about the racism in the US, one manifestation of the racism that has been made apparent is the Prison System. It is a structure that has adapted to target individuals of color since the War on Drugs and the over policing of specific communities. Using the incarceration data collected by the Vera Institute, the variables I have chosen to analyze are mainly the African American jail population data in Washington. In my data visualizations, I have chosen to illustrate how this variable changes over time and across the counties of Washington. I have also chosen to focus on how it compares to the White American and total jail population. 
+
+## Summary Information (5 relevant values of Interest):
+
+**Highest African American Jail population in Washington**
+
+The Highest African American Jail population in Washington was `r relevant_value_1`.   
+The county where this occurred was King County and it happened in 2001.
+
+**Ratio between Highest African American Jail population and Highest White American Jail population**
+
+The ratio between the Highest African American Jail population and the Highest White American Jail population was `r relevant_value_2`. The county where both of these values occurred was King County and it also happened in 2001. 
+
+**Ratio between Highest African American Jail population and Highest Total Jail population**
+
+The ratio between the Highest African American Jail population and the Highest total American Jail population was `r relevant_value_3`. The county where both of these values occurred was King County and it also happened in 2001. 
+
+**Difference between Highest 2001 African American Jail population and Highest 2018 African American Jail population**
+
+The difference between the Highest 2001 African American Jail population and the Highest 2018 African American Jail population was `r relevant_value_4`, with the 2001 African American Jail population being larger. The county where both of these values occurred was King County and it also happened in 2001. 
+
+**Difference between Highest King County African American Jail population and Highest Pierce County African American Jail population**
+
+The difference between the Highest King County African American Jail population and the Highest Pierce County African American Jail population was `r relevant_value_5`, with the King County African American Jail population being larger. The time at which both happened was 2001. 
+
+## Trends Over Time Chart:
+
+```{r echo=FALSE}
+plot(trend_over_time_chart)
+```
+
+The reason why I included this chart was to visualize how the African American Jail population changed over time and to see how it varied between the top 5 largest counties in Washington. The main pattern that emerged was that between the years of 2000 and 2010 the African American Jail population was the highest and that King County had the most African American Jail population of all the counties. However, this may be due to the fact that King County is the largest county in Washington and therefore it may also have the largest African American Jail population.
+
+## Variable Comparison Chart:
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+plot(variable_comparison_chart)
+```
+
+The reason why I included this chart was to visualize how the African American Jail population compared to the White American Jail Population in King County, WA. The main pattern that emerged was that Jail population was comprised of more White Americans than African Americans in King County.
+
+## Map:
+
+```{r echo=FALSE}
+plot(final_map)
+```
+
+The reason why I included this map was to visualize how the African American Jail population compared to the Total Jail population in Washington in the form of a ratio and to see how the African American Jail population varied across the counties of Washington. The main pattern that emerged was that King County had the highest ratio of African American Jail population to Total Jail population (0.3) and was much higher than any of the other counties in Washington.
